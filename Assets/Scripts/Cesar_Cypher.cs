@@ -1,22 +1,16 @@
 using UnityEngine;
 
-public class NKrypt : MonoBehaviour
+public class Cesar_Cypher : MonoBehaviour
 {
-
-    #region Variables
 
     [TextArea, SerializeField] string Phrase = default;
     [TextArea, SerializeField] string CyPhrase = default;
     [TextArea, SerializeField] string UnCyPhrase = default;
     [SerializeField] int Spin = default;
     
-
-    #endregion
-
-
-
-    #region My_Methods
-
+    
+    
+    
     //Text_To_ASCII
     [ContextMenu("ASCII")]
     public void TTA()
@@ -46,6 +40,8 @@ public class NKrypt : MonoBehaviour
 
     }
 
+    
+    
     //ASCII_To_Text
     [ContextMenu("Text")]
     public void ATT()
@@ -76,6 +72,7 @@ public class NKrypt : MonoBehaviour
 
     }
 
+    
 
     //Convert Cesar's Cripto
     string CCC(int ASCII,int limit, byte Cases)
@@ -127,6 +124,8 @@ public class NKrypt : MonoBehaviour
         return res.ToString();
     }
 
+    
+    
     //Inverse Convert Cesar's Cripto
     string ICCC(int ASCII, int limit, byte Cases)
     {
@@ -175,10 +174,6 @@ public class NKrypt : MonoBehaviour
         res = (char)Delta;
         return res.ToString();
     }
-
-
-
-    #endregion
 
 
 }
